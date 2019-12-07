@@ -1,0 +1,7 @@
+$query1 = "SELECT * FROM customer_role WHERE role_id=1 AND customer_id = (SELECT CUST_ID FROM customer WHERE
+CUST_EMAIL='$email')";
+$query2 = "SELECT * FROM customer_role WHERE role_id=2 AND customer_id = (SELECT CUST_ID FROM customer WHERE
+CUST_EMAIL='$email')";
+
+$result1 = mysqli_query($db, $query1);
+$result2 = mysqli_query($db, $query2);
